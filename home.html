@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    JioCinema - Watch Movies, TV Shows & Music Videos Online
+  </title>
+  <link rel="icon" href="/icons/jc_logo.svg" type="image/svg">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <div style="cursor: default;" class="body-wrapper">
+    <div id="root" style="position: fixed;width: 100%;top:0; z-index: 2;">
+      <div class="navbar navbar-dark  md-border-bottom">
+        <a class="navbar-brand" href="/">
+          <img src="/icons/jc_logo_v2.svg" alt="Logo">
+        </a>
+        <a class="subscribe" href="/"><img src="/icons/Screenshot from 2024-02-16 10-58-18.png" alt="Jio Logo"></a>
+        <nav class="navbar-expand-lg">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/" style="color: white;">Home</a>
+              <div class="the-pink">
+                <p style="color: rgba(6,7,7,0);">a</p>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/sports">Sports</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/movies">Movies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/tv-shows">TV Shows</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                More
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <form class="form-inline">
+          <div class="input-group">
+
+            <button class="btn btn-l" type="button" aria-label="voice search button">
+              <img src="icons/ic_search.svg" alt="voice-search">
+            </button>
+            <input aria-invalid="false" autocomplete="off" id="searchInputBox" placeholder="Movies, Shows and more"
+              type="text" role="combobox" aria-autocomplete="both" aria-activedescendant="suggestion--1"
+              aria-owns="results" class="form-control" value="">
+            <button class="btn btn-r" type="button" aria-label="voice search button">
+              <img src="icons/voice-search.svg" alt="voice-search" class="voice-search-icon">
+            </button>
+          </div>
+        </form>
+        <button class="btn" type="button" aria-label="Open Side Drawer">
+          <div class="avatar">
+            <img src="icons/profile_avatar-v2.svg" alt="Avatar">
+          </div>
+        </button>
+      </div>
+      <div class="mini-nav">
+        <div class="L-button"><button class="scroll-left">&lt;</button></div>
+        <div class="mini-nav-item d-flex flex-row">
+          <div class="new-border" style="background: #fff;color:black;">For You</div>
+          <div class="new-border">Colors 📺</div>
+          <div class="new-border">Coming Soon</div>
+          <div class="new-border">IND vs ENG</div>
+          <div class="new-border">New & Popular 🔥</div>
+          <div class="new-border">Kids & Family</div>
+          <div class="new-border">TATA WPL</div>
+          <div class="new-border">Premium</div>
+          <div class="new-border">Hollywood in Hindi</div>
+          <div class="new-border">Romance</div>
+          <div class="new-border">IPL Classics</div>
+          <div class="new-border">News</div>
+          <div class="new-border">Reality</div>
+          <div class="new-border">Cricket</div>
+          <div class="new-border">Peacock Hub</div>
+          <div class="new-border">Kannada</div>
+          <div class="new-border">ISL</div>
+          <div class="new-border">Comedy</div>
+          <div class="new-border">HBO Hub</div>
+          <div class="new-border">Originals</div>
+          <div class="new-border">Hindi</div>
+          <div class="new-border">Tamil</div>
+          <div class="new-border">Bengali</div>
+          <div class="new-border">Marathi</div>
+        </div>
+        <div class="R-button"><button class="scroll-right">&gt;</button></div>
+      </div>
+
+    </div>
+    <div class="body">
+      <div class="my-carosel" style="padding-top: 40px;">
+        <div class="top-pick row">
+          <h3 class="tsp col">Top Sports Picks</h3>
+          <a href="/" class="redirect col"><img src="/images/backgroundImage_1705485340.svg"></a>
+        </div>
+        <div class="carosel">
+          <div class="nav-button-left">
+            <button class="s-left">
+              <h3>&lt;</h3>
+            </button>
+          </div>
+          <div class="car-slide">
+            <div class="slide">
+              <img src="/images/3_test_ind_vs_eng_in_the_stand_vertical_3x4-1708357842060 (1).jpg" height="250px"></img>
+            </div>
+            <div class="slide">
+              <img src="/images/test_ind_vs_eng_player_of_the_match_vertical_3x4-1708265010463 (1).jpg"
+                height="250px"></img>
+            </div>
+            <div class="slide">
+              <img src="/images/test_ind_vs_eng_vertical_3x4-1708256337280 (1).jpg" height="250px"></img>
+            </div>
+            <div class="slide">
+              <img src="/images/3_test_ind_vs_eng_player_of_the_day_vertical_3x4-1708265397806 (1).jpg"
+                height="250px"></img>
+            </div>
+            <div class="slide">
+              <img src="/images/quiz_vertical_3x4-1707981071005.jpg" height="250px"></img>
+            </div>
+            <div class="slide">
+              <img src="/images/ranji_trophy_highlights_vertical_3x4-1708341585770.jpg" height="250px"></img>
+            </div>
+            <div class="slide">
+              <img src="/images/fih_hockey_mens_highlights_ind_vs_spain_vertical-1708362360948.jpg"
+                height="250px"></img>
+            </div>
+            <div class="slide">
+              <img src="/images/football_gold_game_in_90_sec_vertical-1708348993182.jpg" height="250px"></img>
+            </div>
+            <div class="slide">
+              <img src="/images/swot_analysis_dc_verma_vertical-1708060492316 (1).jpg" height="250px"></img>
+            </div>
+            <div class="slide">
+              <img src="/images/3_test_ind_vs_eng_player_of_the_day_vertical_3x4-1708265397806 (1).jpg"
+                height="250px"></img>
+            </div>
+          </div>
+          <div class="nav-button-right">
+            <button class="s-right">
+              <h3>&gt;</h3>
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <div class="my-carosel" style="padding-top: 40px;">
+        <div class="top-pick row">
+          <h3 class="tsp col">Hot Trending Now🔥</h3>
+          <a href="/" class="redirect col"><img src="/images/backgroundImage_1705485340.svg"></a>
+        </div>
+        <div class="carosel ">
+          <div class="nav-button-left hot-left">
+            <button class="s-left" style="margin-top: 125px;">
+              <h3>&lt;</h3>
+            </button>
+          </div>
+          <div class="car-slide hot-pick">
+            <div class="slide">
+              <button class="hot-button">Watch Now</button>
+              <img src="/hotpicks/1-fsf-9-16x9-new-1708014694048.jpg " height="300px" width="300px"></img>
+            </div>
+            <div class="slide">
+              <button class="hot-button">Watch Now</button>
+              <img src="/hotpicks/16x9-1707326111270.jpg" height="300px" width="300px"></img>
+            </div>
+            <div class="slide">
+              <button class="crown"><img src="/icons/premium_icon.svg"></img></button>
+              <button class="hot-button">New Episodes</button>
+              <img src="/hotpicks/16x9-news-show-streaming-now-1705852235696.jpg" height="300px" width="300px"></img>
+            </div>
+            <div class="slide">
+              <button class="hot-button">Watch Promo</button>
+              <img src="/hotpicks/1708355314.jpg" height="300px" width="300px"></img>
+            </div>
+            <div class="slide">
+              <button class="hot-button">Watch Now</button>
+              <img src="/hotpicks/65d1eae161e07e446406b771_1708255990382_aa.jpg" height="300px" width="300px"></img>
+            </div>
+            <div class="slide">
+              <button class="hot-button">Watch Now</button>
+              <img src="/hotpicks/fih_hockey_mens_highlights_ind_vs_spain_carousel-1708362333811.jpg" height="300px"
+                width="300px"></img>
+            </div>
+            <div class="slide">
+              <button class="hot-button">New Episodes</button>
+              <img src="/hotpicks/jkdffa-1706984916155.jpg" height="300px" width="300px"></img>
+            </div>
+            <div class="slide">
+              <button class="crown"><img src="/icons/premium_icon.svg"></img></button>
+              <button class="hot-button">Watch Now</button>
+              <img src="/hotpicks/residentaliens3-16x9-1707940001973.jpg" height="300px" width="300px"></img>
+            </div>
+            <div class="slide">
+              <button class="hot-button">Watch Now</button>
+              <img src="/hotpicks/swot_analysis_upw_harris_carousel-1708067101269.jpg" height="300px"
+                width="300px"></img>
+            </div>
+            <div class="slide">
+              <button class="hot-button">Watch Promo</button>
+              <img src="/hotpicks/the_rapid_fire_carousel-1707980288016.jpg" height="300px" width="300px"></img>
+            </div>
+          </div>
+          <div class="nav-button-right hot-right" style="height: 300px;">
+            <button class="s-right" style="margin-top: 125px;">
+              <h3>&gt;</h3>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="pets">
+        <div class="my-carosel" style="padding-top: 40px;">
+          <div class="top-pick row" style="margin-top: 5%;">
+            <h3 class="tsp col" style="font-family: bold-font; margin-left:40px;font-size: xx-large;">Pet-tastic Picks
+            </h3>
+          </div>
+          <div class="top-pick row" style="margin-top: 6px;">
+            <h3 class="tsp col" style="font-family: search-font; margin-left:40px;font-size: x-large;">Celebrate Love
+              Your Pet Day with these heartwarming movies & shows!</h3>
+          </div>
+          <div class="carosel">
+            <div class="nav-button-left pet-left">
+              <button class="s-left">
+                <h3>&lt;</h3>
+              </button>
+            </div>
+            <div class="car-slide pet-pick">
+              <div class="slide">
+                <img src="/pet/3x4-clean_appa-1690792090152.jpg" height="250px" width="200px"></img>
+              </div>
+              <div class="slide">
+                <button class="crown"><img src="/icons/premium_icon.svg"></img></button>
+                <img src="/pet/3x4777-1708425155175.jpg" height="250px" width="200px"></img>
+              </div>
+              <div class="slide">
+                <button class="crown"><img src="/icons/premium_icon.svg"></img></button>
+                <img src="/pet/dolittle-3x4-1694116451394.jpg" height="250px" width="200px"></img>
+              </div>
+              <div class="slide">
+                <img src="/pet/gnn_3x4-1686331137002.jpg" height="250px" width="200px"></img>
+              </div>
+              <div class="slide">
+                <button class="crown"><img src="/icons/premium_icon.svg"></img></button>
+                <img src="/pet/how-to-train-your-dragon-2-3x4-1686485082381.jpg" height="250px" width="200px"></img>
+              </div>
+              <div class="slide">
+                <img src="/pet/scooby-doo-3x4-1702181197220.jpg" height="250px" width="200px"></img>
+              </div>
+              <div class="slide">
+                <button class="crown"><img src="/icons/premium_icon.svg"></img></button>
+                <img src="/pet/secret-life-of-pets-1-3_4-top-toons--1692455815504.png" height="250px" width="200px"></img>
+              </div>
+              <div class="slide">
+                <img src="/pet/the-secret-life-of-pets-2-3x4-1703998061903.jpg" height="250px" width="200px"></img>
+              </div>
+              <div class="slide">
+                <img src="/pet/3x4-clean_appa-1690792090152.jpg" height="250px" width="200px"></img>
+              </div>
+              <div class="slide">
+                <img src="/pet/haathi-mere-saath-film-3x4-1708069944560.jpg" height="250px" width="200px"></img>
+              </div>
+            </div>
+            <div class="nav-button-right pet-right">
+              <button class="s-right">
+                <h3>&gt;</h3>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="my-carosel" style="padding-top: 40px;">
+        <div class="top-pick row">
+          <h3 class="tsp col">Watch In Your Language</h3>
+        </div>
+        <div class="carosel ">
+          <div class="nav-button-left lang-left">
+            <button class="s-left" style="margin-top: 50px;">
+              <h3>&lt;</h3>
+            </button>
+          </div>
+          <div class="car-slide lang-pick">
+            <div class="slide">
+              <img src="/images/tamil-1706610828692.jpeg" height="150px" width="150px"></img>
+            </div>
+            <div class="slide">
+              <img src="/images/english-1694341614686.jpg" height="150px" width="150px"></img>
+            </div>
+            <div class="slide">
+              <img src="/images/malayalam-1692265111639.jpg" height="150px" width="150px"></img>
+            </div>
+            <div class="slide">
+              <img src="/images/telugu_1x1-1695192589314.jpg" height="150px" width="150px"></img>
+            </div>
+            <div class="slide">
+              <img src="/images/kannada-1692265089872.jpg" height="150px" width="150px"></img>
+            </div>
+            <div class="slide">
+              <img src="/images/bengali-1694342157429.jpg" height="150px" width="150px"></img>
+            </div>
+            <div class="slide">
+              <img src="/images/marathi_1x1-1701073068902.jpg" height="150px" width="150px"></img>
+            </div>
+            <div class="slide">
+              <img src="/images/gujarati-1692265157915.jpg" height="150px" width="150px"></img>
+            </div>
+            <div class="slide">
+              <img src="/images/hindi-1694341340236.jpg" height="150px" width="150px"></img>
+            </div>
+          </div>
+          <div class="nav-button-right lang-right" height="10px">
+            <button class="s-right" style="margin-top: 50px;">
+              <h3>&gt;</h3>
+            </button>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="my-carosel" style="padding-top: 40px;">
+        <div class="top-pick row">
+          <h3 class="tsp col">New & Popular🔥</h3>
+          <a href="/" class="redirect col"><img src="/images/backgroundImage_1705485340.svg"></a>
+        </div>
+        <div class="carosel">
+          <div class="nav-button-left top-pop-left">
+            <button class="s-left">
+              <h3>&lt;</h3>
+            </button>
+          </div>
+          <div class="car-slide top-pop-pick">
+            <div class="slide">
+              <img src="/toppop/3_4final-season-1708067860806.jpg" height="250px" width="200px"></img>
+            </div>
+            <div class="slide">
+              <img src="/toppop/3x4-1707662344601.jpg" height="250px" width="200px"></img>
+            </div>
+            <div class="slide">
+              <img src="/toppop/3x4-1707832469022.jpg" height="250px" width="200px"></img>
+            </div>
+            <div class="slide">
+              <img src="/toppop/3x4-1708334055975.jpg" height="250px" width="200px"></img>
+            </div>
+            <div class="slide">
+              <button class="crown"><img src="/icons/premium_icon.svg"></img></button>
+              <img src="/toppop/resident-alien-s3-tag-3x4-1707972298793.jpg" height="250px" width="200px"></img>
+            </div>
+            <div class="slide">
+              <img src="/toppop/3x4-new-1700146555592.jpg" height="250px" width="200px"></img>
+            </div>
+            <div class="slide">
+              <button class="crown"><img src="/icons/premium_icon.svg"></img></button>
+              <img src="/toppop/3x4______-1708151769824.jpg" height="250px" width="200px"></img>
+            </div>
+            <div class="slide">
+              <img src="/toppop/inside3x4-1706078359224.jpg" height="250px" width="200px"></img>
+            </div>
+            <div class="slide">
+              <img src="/toppop/q20_yastika_bhatia_vertical_3x4-1708366058490.jpg" height="250px" width="200px"></img>
+            </div>
+            <div class="slide">
+              <img src="/toprate/up65_3x4-1692799329846.jpg" height="250px" width="200px"></img>
+            </div>
+          </div>
+          <div class="nav-button-right top-pop-right">
+            <button class="s-right">
+              <h3>&gt;</h3>
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <div class="adds">
+        <img src="/images/14x3_purple-1700208770230.jpg">
+      </div>
+      <div class="my-carosel" style="padding-top: 40px;">
+        <div class="top-pick row">
+          <h3 class="tsp col">India's Top-Rated Originals 🌟</h3>
+          <a href="/" class="redirect col"><img src="/images/backgroundImage_1705485340.svg"></a>
+        </div>
+        <div class="carosel">
+          <div class="nav-button-left top-rate-left">
+            <button class="s-left">
+              <h3>&lt;</h3>
+            </button>
+          </div>
+          <div class="car-slide top-rate-pick">
+            <div class="slide">
+              <img src="/toprate/3_4final-season-1708067860806.jpg" height="250px"></img>
+            </div>
+            <div class="slide">
+              <img src="/toprate/3x4-1700055940311.jpg" height="250px"></img>
+            </div>
+            <div class="slide">
+              <img src="/toprate/3x4-1707124209091.jpg" height="250px"></img>
+            </div>
+            <div class="slide">
+              <img src="/toprate/3x4-1707662344601.jpg" height="250px"></img>
+            </div>
+            <div class="slide">
+              <button class="crown"><img src="/icons/premium_icon.svg"></img></button>
+              <img src="/toprate/3x4thenun2-1707243923639.jpg" height="250px"></img>
+            </div>
+            <div class="slide">
+              <img src="/toprate/asur-2-3x4-1707119861455.jpg" height="250px"></img>
+            </div>
+            <div class="slide">
+              <button class="crown"><img src="/icons/premium_icon.svg"></img></button>
+              <img src="/toprate/crackdown-s2-3x4-1707120324383.jpg" height="250px"></img>
+            </div>
+            <div class="slide">
+              <img src="/toprate/inspector-avinash-3x4-1700146999666.jpg" height="250px"></img>
+            </div>
+            <div class="slide">
+              <img src="/toprate/motupatlu3_1-1706766009890.jpg" height="250px"></img>
+            </div>
+            <div class="slide">
+              <img src="/toprate/up65_3x4-1692799329846.jpg" height="250px"></img>
+            </div>
+          </div>
+          <div class="nav-button-right top-rate-right">
+            <button class="s-right">
+              <h3>&gt;</h3>
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <div class="my-carosel" style="padding-top: 40px;">
+        <div class="top-pick row">
+          <h3 class="tsp col">Popular Sports</h3>
+          <a href="/" class="redirect col"><img src="/images/backgroundImage_1705485340.svg"></a>
+        </div>
+        <div class="carosel">
+          <div class="nav-button-left spt-left">
+            <button class="s-left">
+              <h3>&lt;</h3>
+            </button>
+          </div>
+          <div class="car-slide spt-pick">
+            <div class="slide">
+              <img src="/sports/athletics_show-1707418819968.jpg" height="250px" width="200px"></img>
+            </div>
+            <div class="slide">
+              <img src="/sports/badminton_show-1707418874563.jpg" height="250px" width="200px"></img>
+            </div>
+            <div class="slide">
+              <img src="/sports/basketball_show-1707418523849.jpg" height="250px" width="200px"></img>
+            </div>
+            <div class="slide">
+              <img src="/sports/cricket_show-1707419374855.jpg" height="250px" width="200px"></img>
+            </div>
+            <div class="slide">
+              <img src="/sports/football_show-1707418454559.jpg" height="250px" width="200px"></img>
+            </div>
+            <div class="slide">
+              <img src="/sports/hockey_show-1707418768361.jpg" height="250px" width="200px"></img>
+            </div>
+            <div class="slide">
+              <img src="/sports/motorsports_show-1707418929447.jpg" height="250px" width="200px"></img>
+            </div>
+            <div class="slide">
+              <img src="/sports/squash_show-1707419096802.jpg" height="250px" width="200px"></img>
+            </div>
+            <div class="slide">
+              <img src="/sports/table_tennis_show-1707419219320.jpg" height="250px" width="200px"></img>
+            </div>
+            <div class="slide">
+              <img src="/sports/tennis_show-1707418572872.jpg" height="250px" width="200px"></img>
+            </div>
+          </div>
+          <div class="nav-button-right spt-right">
+            <button class="s-right">
+              <h3>&gt;</h3>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="foot">
+      <div class="reference">
+        <div class="row">
+          <div class="col">
+            <div id="ul1" class="text-left">
+              <h5>JioCinema</h5>
+              <ul>
+                <li>For You</li>
+                <li>Sports</li>
+                <li>Movies</li>
+                <li>TV Shows</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <div id="ul2" class="text-left">
+              <h5>Support</h5>
+              <ul>
+                <li>Help Center</li>
+                <li>Terms Of Use</li>
+                <li>Privacy Policy</li>
+                <li>Content Complaints</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col link">
+            <h3 class="download">Connect With Us</h3><br>
+            <div class="socialmedia d-flex ">
+              <div class="roundlink">
+                <img src="icons/facebook.svg" alt="Facebook">
+              </div>
+              <div class="roundlink">
+                <img src="icons/x.svg" alt="Twitter">
+              </div>
+              <div class="roundlink">
+                <img src="icons/instagram.svg" alt="Instagram">
+              </div>
+              <div class="roundlink">
+                <img src="icons/youtube.svg" alt="Youtube">
+              </div>
+            </div>
+          </div>
+          <div class="col social">
+            <h3 class="download">Download The App</h3><br>
+            <div class="app-download ">
+              <img src="icons/googlePlay.svg" alt="Google Play Badge">
+              <img src="icons/appleStore.svg" alt="App Store Badge">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <p class="copyright">
+          Copyright © 2024 Viacom18 Media PVT LTD. All rights reserved.
+        </p>
+        <div class="f-logo">
+          <img src="icons/jio-logo.png">
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
