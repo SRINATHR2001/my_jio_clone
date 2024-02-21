@@ -1,3 +1,44 @@
+@font-face {
+  font-family: "search-font";
+  src: url(/fonts/JioTypeVarW05-Regular.woff2);
+}
+@font-face {
+  font-family: "nav-font";
+  src: url(/fonts/JioTypeW05-Medium.woff2);
+}
+@font-face {
+  font-family: "bold-font";
+  src: url(/fonts/JioTypeW05-Bold.woff2);
+}
+@font-face{
+  font-family:"slick-font";
+  src:url(/fonts/slick.653a4cbb.woff2);
+}
+@font-face {
+  font-family: "extra-bold";
+  src: url("/fonts/JioTypeW05-ExtraBlack.woff2");
+}
+@media (min-width: 640px) {
+  body {
+    overscroll-behavior-y: none;
+  }
+}
+@media screen and (min-width: 901px) and (max-width: 1436px) {
+  body {
+    overscroll-behavior-y: none;
+  }
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
 body {
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
@@ -92,8 +133,8 @@ body {
     font-family: "search-font";
     font-size: 15px;
 
- }
- 
+}
+
 .navbar-brand img {
     max-width: fit-content;
     max-height: fit-content;
@@ -171,9 +212,14 @@ body {
 .slide img{
   border-radius: 9px;
   margin-right: 10px;
+  
 /* position: relative; */
 z-index: 0;
 }
+.slide img:hover{
+  opacity: 0.5;
+}
+
 .crown{
   position: absolute;
   border:none;
@@ -192,14 +238,10 @@ z-index: 0;
   border: none;
   border-radius: 20px;
 }
-
-
-
 .carosel{
   margin-top: 15px;
   margin-left: 25px;
   display: flex;
- 
   max-width: 100%;
 }
 .car-slide::-webkit-scrollbar {
@@ -279,27 +321,7 @@ z-index: 0;
   * {
     box-sizing: inherit;
   }
-  @media (min-width: 640px) {
-    body {
-      overscroll-behavior-y: none;
-    }
-  }
-  @media screen and (min-width: 901px) and (max-width: 1436px) {
-    body {
-      overscroll-behavior-y: none;
-    }
-  }
-  html {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    box-sizing: border-box;
-    -webkit-text-size-adjust: 100%;
-  }
-  @media (prefers-color-scheme: dark) {
-    html {
-      color-scheme: dark;
-    }
-  }
+
   .rights-section {
     display: flex;
     align-items: center;
@@ -418,7 +440,15 @@ margin-right: 35px;
   background-repeat: no-repeat;
 
 }
-
+.tata-left button {
+  margin-top: 4rem;
+}
+.tata-right{
+  min-height: 170px;
+}
+.tata-right button {
+  margin-top: 4rem;
+}
 .body{
   margin-top: 140px;
   background-color: rgb(13,14,16);
@@ -514,29 +544,83 @@ margin-right: 35px;
   margin-top: -10px;
   background-color: rgb(51,52,54);
 }
-@font-face {
-  font-family: "search-font";
-  src: url(/fonts/JioTypeVarW05-Regular.woff2);
-}
-@font-face {
-  font-family: "nav-font";
-  src: url(/fonts/JioTypeW05-Medium.woff2);
-}
-@font-face {
-  font-family: "bold-font";
-  src: url(/fonts/JioTypeW05-Bold.woff2);
-}
-@font-face{
-  font-family:"slick-font";
-  src:url(/fonts/slick.653a4cbb.woff2);
-}
-
 .body-wrapper{
   background-color: rgb(13,14,16);
 }
+.bg-pic{
+  
+  position: relative;
+  background-image: url("/hotpicks/16x9-news-show-streaming-now-1705852235696.jpg");
+  background-size: cover; 
+  min-height: 37rem;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+.bg-pic-gradient{
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  height: 35rem;
+  width: 100%;
+  background: linear-gradient(to top, rgba(13, 14, 16, 1) 5%, rgba(13, 14, 16, 0))20%, rgba(255, 255, 255, 0); 
 
-
-
+}
+.bg-pic-button{
+  font-family: "bold-font";
+  font-size: smaller;
+  position: absolute;
+  bottom: 10rem;
+  left:2%;
+  border: none;
+  background-color: #d9008d;
+  border-radius: 20px;
+  min-height: 46px;
+  min-width: 144px;
+  padding: 8px 12px;
+}
+.bg-name{
+  position: absolute;
+  font-family: "extra-bold";
+  color: #FFFFFF;
+  left: 15%;
+  bottom: 10.4rem;
+}
+.bg-discript{
+  position: absolute;
+  left: 15%;
+  bottom: 3.4rem;
+  color: #FFFFFF;
+}
+.bg-class{
+  font-weight: 400;
+    letter-spacing: 0.00938em;
+    font-family:"nav-font";
+    word-break: break-word;
+    border-width: 0;
+    border-color: #e5e7eb;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin: 0;
+    margin-top: -110px;
+    color: #D9D6E5;
+    line-height: 1.25;
+    font-size: .9375rem;
+}
+.bg-cast-title{
+  font-size: x-large;
+  font-family: "nav-font";
+}
+.bg-cast-discript{
+  font-size: 15px;
+  font-family: "nav-font";
+  margin-top: -18px;
+}
+.bg-cast{
+  position: absolute;
+  left: 75%;
+  bottom: 7.2rem;
+  color: #FFFFFF;
+}
 
 
 

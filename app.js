@@ -30,219 +30,36 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 document.addEventListener("DOMContentLoaded", function () {
-    const scrollContainer = document.querySelector(".car-slide");
-    const scrollLeftButton = document.querySelector(".nav-button-left button");
-    const scrollRightButton = document.querySelector(".nav-button-right button");
-    const scrollAmount = 400; 
-    scrollLeftButton.addEventListener("click", function () {
-        scrollContainer.scrollTo({
-            left: scrollContainer.scrollLeft - scrollAmount,
-            behavior: "smooth"
-        });
-    });
-    scrollRightButton.addEventListener("click", function () {
-        scrollContainer.scrollTo({
-            left: scrollContainer.scrollLeft + scrollAmount,
-            behavior: "smooth"
-        });
-    });
-    scrollContainer.addEventListener("scroll", function () {
-        if (scrollContainer.scrollLeft === 0) {
-            scrollLeftButton.style.display = "none";
-        } else {
-            scrollLeftButton.style.display = "block";
-        }
+    const sections = [
+        { container: document.querySelector(".car-slide"), leftBtn: document.querySelector(".nav-button-left button"), rightBtn: document.querySelector(".nav-button-right button") },
+        { container: document.querySelector(".hot-pick"), leftBtn: document.querySelector(".hot-left button"), rightBtn: document.querySelector(".hot-right button") },
+        { container: document.querySelector(".lang-pick"), leftBtn: document.querySelector(".lang-left button"), rightBtn: document.querySelector(".lang-right button") },
+        { container: document.querySelector(".top-rate-pick"), leftBtn: document.querySelector(".top-rate-left button"), rightBtn: document.querySelector(".top-rate-right button") },
+        { container: document.querySelector(".top-pop-pick"), leftBtn: document.querySelector(".top-pop-left button"), rightBtn: document.querySelector(".top-pop-right button") },
+        { container: document.querySelector(".spt-pick"), leftBtn: document.querySelector(".spt-left button"), rightBtn: document.querySelector(".spt-right button") },
+        { container: document.querySelector(".pet-pick"), leftBtn: document.querySelector(".pet-left button"), rightBtn: document.querySelector(".pet-right button") },
+        { container: document.querySelector(".tata-pick"), leftBtn: document.querySelector(".tata-left button"), rightBtn: document.querySelector(".tata-right button") },
+    ];
 
-        if (scrollContainer.scrollLeft + scrollContainer.clientWidth === scrollContainer.scrollWidth) {
-            scrollRightButton.style.display = "none";
-        } else {
-            scrollRightButton.style.display = "block";
-        }
-    });
-});
-document.addEventListener("DOMContentLoaded", function () {
-    const scrollContainer = document.querySelector(".hot-pick");
-    const scrollLeftButton = document.querySelector(".hot-left button");
-    const scrollRightButton = document.querySelector(".hot-right button");
-    const scrollAmount = 400; 
-    scrollLeftButton.addEventListener("click", function () {
-        scrollContainer.scrollTo({
-            left: scrollContainer.scrollLeft - scrollAmount,
-            behavior: "smooth"
+    sections.forEach(({ container, leftBtn, rightBtn }) => {
+        const containerWidth = container.clientWidth;
+        leftBtn.addEventListener("click", function () {
+            container.scrollTo({
+                left: container.scrollLeft - containerWidth,
+                behavior: "smooth"
+            });
         });
-    });
-    scrollRightButton.addEventListener("click", function () {
-        scrollContainer.scrollTo({
-            left: scrollContainer.scrollLeft + scrollAmount,
-            behavior: "smooth"
-        });
-    });
-    scrollContainer.addEventListener("scroll", function () {
-        if (scrollContainer.scrollLeft === 0) {
-            scrollLeftButton.style.display = "none";
-        } else {
-            scrollLeftButton.style.display = "block";
-        }
 
-        if (scrollContainer.scrollLeft + scrollContainer.clientWidth === scrollContainer.scrollWidth) {
-            scrollRightButton.style.display = "none";
-        } else {
-            scrollRightButton.style.display = "block";
-        }
-    });
-});
-document.addEventListener("DOMContentLoaded", function () {
-    const scrollContainer = document.querySelector(".lang-pick");
-    const scrollLeftButton = document.querySelector(".lang-left button");
-    const scrollRightButton = document.querySelector(".lang-right button");
-    const scrollAmount = 400; 
-    scrollLeftButton.addEventListener("click", function () {
-        scrollContainer.scrollTo({
-            left: scrollContainer.scrollLeft - scrollAmount,
-            behavior: "smooth"
+        rightBtn.addEventListener("click", function () {
+            container.scrollTo({
+                left: container.scrollLeft + containerWidth,
+                behavior: "smooth"
+            });
         });
-    });
-    scrollRightButton.addEventListener("click", function () {
-        scrollContainer.scrollTo({
-            left: scrollContainer.scrollLeft + scrollAmount,
-            behavior: "smooth"
-        });
-    });
-    scrollContainer.addEventListener("scroll", function () {
-        if (scrollContainer.scrollLeft === 0) {
-            scrollLeftButton.style.display = "none";
-        } else {
-            scrollLeftButton.style.display = "block";
-        }
 
-        if (scrollContainer.scrollLeft + scrollContainer.clientWidth === scrollContainer.scrollWidth) {
-            scrollRightButton.style.display = "none";
-        } else {
-            scrollRightButton.style.display = "block";
-        }
-    });
-});
-document.addEventListener("DOMContentLoaded", function () {
-    const scrollContainer = document.querySelector(".top-rate-pick");
-    const scrollLeftButton = document.querySelector(".top-rate-left button");
-    const scrollRightButton = document.querySelector(".top-rate-right button");
-    const scrollAmount = 400; 
-    scrollLeftButton.addEventListener("click", function () {
-        scrollContainer.scrollTo({
-            left: scrollContainer.scrollLeft - scrollAmount,
-            behavior: "smooth"
+        container.addEventListener("scroll", function () {
+            leftBtn.style.display = container.scrollLeft === 0 ? "none" : "block";
+            rightBtn.style.display = container.scrollLeft + container.clientWidth === container.scrollWidth ? "none" : "block";
         });
-    });
-    scrollRightButton.addEventListener("click", function () {
-        scrollContainer.scrollTo({
-            left: scrollContainer.scrollLeft + scrollAmount,
-            behavior: "smooth"
-        });
-    });
-    scrollContainer.addEventListener("scroll", function () {
-        if (scrollContainer.scrollLeft === 0) {
-            scrollLeftButton.style.display = "none";
-        } else {
-            scrollLeftButton.style.display = "block";
-        }
-
-        if (scrollContainer.scrollLeft + scrollContainer.clientWidth === scrollContainer.scrollWidth) {
-            scrollRightButton.style.display = "none";
-        } else {
-            scrollRightButton.style.display = "block";
-        }
-    });
-});
-document.addEventListener("DOMContentLoaded", function () {
-    const scrollContainer = document.querySelector(".top-pop-pick");
-    const scrollLeftButton = document.querySelector(".top-pop-left button");
-    const scrollRightButton = document.querySelector(".top-pop-right button");
-    const scrollAmount = 400; 
-    scrollLeftButton.addEventListener("click", function () {
-        scrollContainer.scrollTo({
-            left: scrollContainer.scrollLeft - scrollAmount,
-            behavior: "smooth"
-        });
-    });
-    scrollRightButton.addEventListener("click", function () {
-        scrollContainer.scrollTo({
-            left: scrollContainer.scrollLeft + scrollAmount,
-            behavior: "smooth"
-        });
-    });
-    scrollContainer.addEventListener("scroll", function () {
-        if (scrollContainer.scrollLeft === 0) {
-            scrollLeftButton.style.display = "none";
-        } else {
-            scrollLeftButton.style.display = "block";
-        }
-
-        if (scrollContainer.scrollLeft + scrollContainer.clientWidth === scrollContainer.scrollWidth) {
-            scrollRightButton.style.display = "none";
-        } else {
-            scrollRightButton.style.display = "block";
-        }
-    });
-});
-document.addEventListener("DOMContentLoaded", function () {
-    const scrollContainer = document.querySelector(".spt-pick");
-    const scrollLeftButton = document.querySelector(".spt-left button");
-    const scrollRightButton = document.querySelector(".spt-right button");
-    const scrollAmount = 400; 
-    scrollLeftButton.addEventListener("click", function () {
-        scrollContainer.scrollTo({
-            left: scrollContainer.scrollLeft - scrollAmount,
-            behavior: "smooth"
-        });
-    });
-    scrollRightButton.addEventListener("click", function () {
-        scrollContainer.scrollTo({
-            left: scrollContainer.scrollLeft + scrollAmount,
-            behavior: "smooth"
-        });
-    });
-    scrollContainer.addEventListener("scroll", function () {
-        if (scrollContainer.scrollLeft === 0) {
-            scrollLeftButton.style.display = "none";
-        } else {
-            scrollLeftButton.style.display = "block";
-        }
-
-        if (scrollContainer.scrollLeft + scrollContainer.clientWidth === scrollContainer.scrollWidth) {
-            scrollRightButton.style.display = "none";
-        } else {
-            scrollRightButton.style.display = "block";
-        }
-    });
-});
-document.addEventListener("DOMContentLoaded", function () {
-    const scrollContainer = document.querySelector(".pet-pick");
-    const scrollLeftButton = document.querySelector(".pet-left button");
-    const scrollRightButton = document.querySelector(".pet-right button");
-    const scrollAmount = 400; 
-    scrollLeftButton.addEventListener("click", function () {
-        scrollContainer.scrollTo({
-            left: scrollContainer.scrollLeft - scrollAmount,
-            behavior: "smooth"
-        });
-    });
-    scrollRightButton.addEventListener("click", function () {
-        scrollContainer.scrollTo({
-            left: scrollContainer.scrollLeft + scrollAmount,
-            behavior: "smooth"
-        });
-    });
-    scrollContainer.addEventListener("scroll", function () {
-        if (scrollContainer.scrollLeft === 0) {
-            scrollLeftButton.style.display = "none";
-        } else {
-            scrollLeftButton.style.display = "block";
-        }
-
-        if (scrollContainer.scrollLeft + scrollContainer.clientWidth === scrollContainer.scrollWidth) {
-            scrollRightButton.style.display = "none";
-        } else {
-            scrollRightButton.style.display = "block";
-        }
     });
 });
