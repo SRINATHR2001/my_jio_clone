@@ -621,7 +621,42 @@ margin-right: 35px;
   bottom: 7.2rem;
   color: #FFFFFF;
 }
-
-
-
+#episodes{
+  position: absolute;
+  left:2%;
+  bottom: -1rem;
+  color: white;
+  font-family: "bold-font";
+}
+.pink{
+  background-color: #d9008d;
+  width:5rem;
+  height:4px;
+  margin-left: 2.1rem;
+  border-radius: 3px;
+  font-family: "slick-font";
+}
+.main-text{
+color: #FFFFFF;  
+margin-bottom: -3px;
+}
+.sub-text{
+  position: absolute;
+  color: #FFFFFF;
+  margin-top: -4px;
+}
+.series-left{
+  max-height: 10.8rem;
+  margin-top: 1rem;
+}
+.series-right{
+  min-height: 10.8rem;
+  margin-top: 1rem;
+}
+.more-row{
+  display: flex;
+  min-height: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 /* <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowForwardIosIcon"><path d="M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z"></path></svg> */
