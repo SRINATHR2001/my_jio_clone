@@ -63,3 +63,29 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+function hideModal() {
+    var options = document.getElementById('bg-blacker');
+    options.style.display = 'none';
+    
+}
+
+
+function hideavtModal() {
+    var options = document.getElementById('bg-avt');
+    options.style.display = 'none';
+    
+}
+
+function showModal() {
+    hideavtModal();
+    var options = document.getElementById('bg-blacker');
+    options.style.display = 'block';
+    
+}
+function showavtModal() {
+    hideModal();
+    var options = document.getElementById('bg-avt');
+    options.style.display = 'block';
+    
+}

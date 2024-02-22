@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="app.js"></script>
 </head>
@@ -40,10 +41,11 @@
               <a class="nav-link" href="/tv-shows">TV Shows</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+              <button class="nav-link dropdown-toggle" type="button" id="navbarDropdown" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" style="background: transparent; border: none;"
+                onclick="showModal()">
                 More
-              </a>
+              </button>
             </li>
           </ul>
         </nav>
@@ -62,7 +64,7 @@
           </div>
         </form>
         <button class="btn" type="button" aria-label="Open Side Drawer">
-          <div class="avatar">
+          <div class="avatar" onclick="showavtModal()">
             <img src="icons/profile_avatar-v2.svg" alt="Avatar">
           </div>
         </button>
@@ -100,6 +102,66 @@
 
     </div>
     <div class="body">
+      <div class="black-background" id="bg-blacker" onclick="hideModal()">
+        <div class="options">
+          <h2 id="more-bow">Browse</h2>
+        </div>
+        <div class="clickables">
+          <div class="row">
+            <div class="col bg-col">
+              <h4>
+                <pre> 📰<br>News</pre>
+              </h4>
+            </div>
+            <div class="col bg-col">
+              <h4 style="margin-left: 33px;">
+                <pre>  👪<br>Family</pre>
+              </h4>
+            </div>
+            <div class="col bg-col">
+              <h4 style="margin-left: 23px;">
+                <pre>  👑<br>Premium</pre>
+              </h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col bg-col">
+              <h4 style="margin-left: 26px;">
+                <pre>   🎬<br>Original</pre>
+              </h4>
+            </div>
+            <div class="col bg-col">
+              <h4 style="margin-left: 23px;">
+                <pre>  🏏<br>Cricket</pre>
+              </h4>
+            </div>
+            <div class="col bg-col">
+              <h4 style="margin-left: 36px;">
+                <pre>  हि<br>Hindi</pre>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="black-background" id="bg-avt" onclick="hideavtModal()">
+        <div class="avt-options">
+          <div class="avt-solo" onclick="showavtModal()">
+            <img src="icons/profile_avatar-v2.svg" alt="Avatar">
+          </div>
+          <div class="avt-box">
+            <h3>Guest</h3>
+            <button>Login</button>
+            <img src="icons/family_and_kids.svg" alt="Avatar">
+            <h5>Kids & Family</h5>
+            <h4>&gt;</h4>
+          </div>
+            <h6 style="font-size: 15px;">Subscribe Now!</h6>
+            <p>_____________________________________________________________________________________________________________________________________________________________________________________________</p>
+            <h6 style="margin-top: 20.8rem;font-size: 15px;">Help & Legal</h6>
+            <h6 style="margin-top: 30.8rem;font-size: 12px;"><u>Privacy and T&C</u></h6>
+            <h6 style="margin-top: 31.8rem;font-size: 9px;font-family:Arial, Helvetica, sans-serif">24.02.19.0 - cc9d6011 - 66d7594a - 0897 - 45b4 - 8b45 - 6e89e65cb98b</h6>
+        </div>
+      </div>
       <div class="my-carosel" style="padding-top: 40px;">
         <div class="top-pick row">
           <h3 class="tsp col">Top Sports Picks</h3>
@@ -179,7 +241,8 @@
             <div class="slide">
               <button class="crown"><img src="/icons/premium_icon.svg"></img></button>
               <button class="hot-button">New Episodes</button>
-              <a href="jabhu.html"><img src="/hotpicks/16x9-news-show-streaming-now-1705852235696.jpg" height="300px" width="300px"></img></a>
+              <a href="jabhu.html"><img src="/hotpicks/16x9-news-show-streaming-now-1705852235696.jpg" height="300px"
+                  width="300px"></img></a>
             </div>
             <div class="slide">
               <button class="hot-button">Watch Promo</button>
@@ -260,7 +323,8 @@
               </div>
               <div class="slide">
                 <button class="crown"><img src="/icons/premium_icon.svg"></img></button>
-                <img src="/pet/secret-life-of-pets-1-3_4-top-toons--1692455815504.png" height="250px" width="200px"></img>
+                <img src="/pet/secret-life-of-pets-1-3_4-top-toons--1692455815504.png" height="250px"
+                  width="200px"></img>
               </div>
               <div class="slide">
                 <img src="/pet/the-secret-life-of-pets-2-3x4-1703998061903.jpg" height="250px" width="200px"></img>
@@ -511,13 +575,14 @@
               <img src="/tata/3710159_h_1700829719.jpg" height="170px" width="290px"></img>
             </div>
             <div class="slide">
-              <img src="/tata/best_moments_wpl_tray-1680001777882.jpg "height="170px" width="290px"></img>
+              <img src="/tata/best_moments_wpl_tray-1680001777882.jpg " height="170px" width="290px"></img>
             </div>
             <div class="slide">
               <img src="/tata/Best_Run_Outs_Deepti_1700829719.jpg" height="170px" width="290px"></img>
             </div>
             <div class="slide">
-              <img src="/tata/final_hayley_matthews_purple_cap_race-1679865635312.jpg" height="170px" width="290px"></img>
+              <img src="/tata/final_hayley_matthews_purple_cap_race-1679865635312.jpg" height="170px"
+                width="290px"></img>
             </div>
             <div class="slide">
               <img src="/tata/final_meg_lanning_orange_cap_race-1679867770730.jpg" height="170px" width="290px"></img>
