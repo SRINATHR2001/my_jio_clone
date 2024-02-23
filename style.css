@@ -190,6 +190,7 @@ body {
 /* hello */
   .new-border:hover {
     background-color: rgba(255,255, 255, 0.5);
+    cursor: pointer;
   }
   .tsp{
     margin-left: 20px;
@@ -210,19 +211,21 @@ body {
   .slide{
     position: relative;
   }
-  
   .slide .hot-button{
     background-color: #d9008d;
   }
+  
 .slide img{
   border-radius: 9px;
   margin-right: 10px;
+  cursor: pointer;
   
 /* position: relative; */
 z-index: 0;
 }
 .slide img:hover{
   opacity: 0.5;
+  cursor: pointer;
 }
 
 .crown{
@@ -656,11 +659,11 @@ font-family: "bold-font";
 }
 .series-left{
   max-height: 10.8rem;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
 }
 .series-right{
   min-height: 10.8rem;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
 }
 .more-row{
   display: flex;
@@ -796,4 +799,82 @@ z-index: 100;
   margin-top:19.4rem;
   margin-left:2rem;
   font-size: 3px;
+}
+
+.main-pick{
+  margin-left: -20px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  width: 100%;
+  overflow-x: auto;
+  margin-right:-20px;
+}
+.main-pick::-webkit-scrollbar{
+  display: none;
+}
+.main-but-left{
+  position: absolute;
+  z-index: 1;
+  margin-left: 60rem;
+  border:none;
+  width:40px;
+  height: 40px;
+  border-radius: 35px;
+  top:30.9rem;
+  opacity: 0.9;
+}
+.main-but-right{
+  position:absolute;
+  z-index: 1;
+  margin-left: 63rem;
+  border: none;
+  width:40px;
+  height: 40px;
+  border-radius: 35px;
+  top:30.9rem;
+  opacity: 0.9;
+}
+.slide-div{
+  position: relative;
+}
+.slide-div img{
+  opacity: 0.5;
+  width:30rem;
+  height:20rem;
+border-radius: 9px;
+margin-right: 10px;
+cursor: pointer;
+z-index: 0;
+}
+
+.main-left{
+  border:none;
+  border-radius: 30px;
+  width:40px;
+  height: 40px;
+}
+.main-right{
+  border:none;
+  border-radius: 30px;
+  width:40px;
+  height: 40px;
+}
+.slide-topic{
+  justify-content: center;
+  align-items: center;
+  display: none;
+    position: absolute;
+  z-index: 200px;
+  color: #000000;
+  margin-top:-10rem;
+  margin-left:10.8rem;
+  width:15rem;
+  height:10rem;
+}
+.slide-topic img{
+  z-index: 350;
+  width:100%;
+  height:100%;
+  opacity: 1;
 }

@@ -10,9 +10,9 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="app.js"></script>
+  <script src="https://kit.fontawesome.com/cd1d07a234.js" crossorigin="anonymous"></script>
+  
 </head>
 
 <body>
@@ -70,7 +70,7 @@
         </button>
       </div>
       <div class="mini-nav">
-        <div class="L-button"><button class="scroll-left">&lt;</button></div>
+        <div class="L-button"><button class="scroll-left"><i class="fa-solid fa-angle-up fa-rotate-270" style="color: #ffffff;"></i></button></div>
         <div class="mini-nav-item d-flex flex-row">
           <div class="new-border" style="background: #fff;color:black;">For You</div>
           <div class="new-border">Colors 📺</div>
@@ -97,7 +97,7 @@
           <div class="new-border">Bengali</div>
           <div class="new-border">Marathi</div>
         </div>
-        <div class="R-button"><button class="scroll-right">&gt;</button></div>
+        <div class="R-button"><button class="scroll-right"><i class="fa-solid fa-angle-up fa-rotate-90" style="color: #ffffff;"></i></button></div>
       </div>
 
     </div>
@@ -110,34 +110,34 @@
           <div class="row">
             <div class="col bg-col">
               <h4>
-                <pre> 📰<br>News</pre>
+                <pre> <i class="fa-solid fa-newspaper" style="color: #ffffff;"></i><br>News</pre>
               </h4>
             </div>
             <div class="col bg-col">
               <h4 style="margin-left: 33px;">
-                <pre>  👪<br>Family</pre>
+                <pre>  <i class="fa-solid fa-people-group" style="color: #ffffff;"></i><br>Family</pre>
               </h4>
             </div>
             <div class="col bg-col">
               <h4 style="margin-left: 23px;">
-                <pre>  👑<br>Premium</pre>
+                <pre>   <i class="fa-solid fa-crown"></i><br>Premium</pre>
               </h4>
             </div>
           </div>
           <div class="row">
             <div class="col bg-col">
               <h4 style="margin-left: 26px;">
-                <pre>   🎬<br>Original</pre>
+                <pre>   <i class="fa-solid fa-clapperboard"></i><br>Original</pre>
               </h4>
             </div>
             <div class="col bg-col">
               <h4 style="margin-left: 23px;">
-                <pre>  🏏<br>Cricket</pre>
+                <pre>   <i class="fa-solid fa-baseball-bat-ball"></i><br>Cricket</pre>
               </h4>
             </div>
             <div class="col bg-col">
               <h4 style="margin-left: 36px;">
-                <pre>  हि<br>Hindi</pre>
+                <pre>  <i class="fa-solid fa-om"></i><br>Hindi</pre>
               </h4>
             </div>
           </div>
@@ -153,7 +153,7 @@
             <button>Login</button>
             <img src="icons/family_and_kids.svg" alt="Avatar">
             <h5>Kids & Family</h5>
-            <h4>&gt;</h4>
+            <h4><i class="fa-solid fa-angle-up fa-rotate-90" style="color: #ffffff;"></i></h4>
           </div>
             <h6 style="font-size: 15px;">Subscribe Now!</h6>
             <p>_____________________________________________________________________________________________________________________________________________________________________________________________</p>
@@ -163,6 +163,62 @@
         </div>
       </div>
       <div class="my-carosel" style="padding-top: 40px;">
+        <div class="carosel">
+          <div class="main-but-left">
+            <button class="main-left" onmousedown="reddiv()" onmouseup="enldiv()" onclick="any(-1)">
+              <h3><i class="fa-solid fa-angle-up fa-rotate-270" style="color: #ffffff;"></i></h3>
+            </button>
+          </div>
+          <div class="main-pick">
+            <div class="slide-div" style="margin-right: 0px;">
+              <img  src="/images/3_test_ind_vs_eng_in_the_stand_vertical_3x4-1708357842060 (1).jpg" height="250px" style="opacity: 0;"></img>
+            </div>
+            <div class="slide-div">
+              <img class="slide-div-img" src="/main/16x9-1708411633820.jpg" height="250px"></img>
+              <div class="slide-topic"><img src="/sticker/mobile-logo-class-e-1707325842658.png"></img></div>
+            </div>
+            <div class="slide-div">
+              <img class="slide-div-img" src="/main/1708618823.jpg"
+                height="250px"></img>
+                <div class="slide-topic"><img src="/sticker/isl_highlights_logo-1703259678759.png"></img></div>
+            </div>
+            <div class="slide-div">
+              <img class="slide-div-img" src="/main/65d7842f4a78c38f8d7acf6d_1708622903359_aa.jpg" height="250px"></img>
+              <div class="slide-topic"><img src="/sticker/wpl_preview-1708623786645.png"></img></div>
+            </div>
+            <div class="slide-div">
+              <img class="slide-div-img" src="/main/csk_vs_rcb_carousel-1708612160831.jpg"
+                height="250px"></img>
+                <div class="slide-topic"><img src="/sticker/ipl_white_logo-1708622113401.png"></img></div>
+            </div>
+            <div class="slide-div">
+              <img class="slide-div-img" src="/main/parks-and-recreation-16x9-1686391375919.jpg" height="250px"></img>
+              <div class="slide-topic">
+                <img src="/sticker/parks-and-recreation-mobile-logo-2-1697006192593.png"></img>
+              </div>
+            </div>
+            <div class="slide-div">
+              <img class="slide-div-img" src="/main/true-detective-16x9-1706785892308.jpg" height="250px"></img>
+              <div class="slide-topic"><img src="/sticker/vertical-carousel-logo_01new-1705301214129.png"></img></div>
+            </div>
+            <div class="slide-div">
+              <img class="slide-div-img" src="/main/wpl_captain_huddle_clean_ctv-1708632992502.jpg" height="250px"></img>
+              <div class="slide-topic"><img src="/sticker/captain_huddle_logo-1708633042414.png"></img></div>
+            </div>
+            <div class="slide-div" style="margin-left: -100px;">
+              <img  src="/images/3_test_ind_vs_eng_in_the_stand_vertical_3x4-1708357842060 (1).jpg" height="250px" style="opacity: 0;"></img>
+              
+            </div>
+          </div>
+          <div class="main-but-right">
+            <button class="main-right" onmousedown="redbut()" onmouseup="enlbut()" onclick="any(1)">
+              <h3><i class="fa-solid fa-angle-up fa-rotate-90" style="color: #ffffff;"></i></h3>
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <div class="my-carosel" style="padding-top: 40px;">
         <div class="top-pick row">
           <h3 class="tsp col">Top Sports Picks</h3>
           <a href="/" class="redirect col"><img src="/images/backgroundImage_1705485340.svg"></a>
@@ -170,7 +226,7 @@
         <div class="carosel">
           <div class="nav-button-left">
             <button class="s-left">
-              <h3>&lt;</h3>
+              <h3><i class="fa-solid fa-angle-up fa-rotate-270" style="color: #ffffff;"></i></h3>
             </button>
           </div>
           <div class="car-slide">
@@ -212,7 +268,7 @@
           </div>
           <div class="nav-button-right">
             <button class="s-right">
-              <h3>&gt;</h3>
+              <h3><i class="fa-solid fa-angle-up fa-rotate-90" style="color: #ffffff;"></i></h3>
             </button>
           </div>
         </div>
@@ -226,7 +282,7 @@
         <div class="carosel ">
           <div class="nav-button-left hot-left">
             <button class="s-left" style="margin-top: 125px;">
-              <h3>&lt;</h3>
+              <h3><i class="fa-solid fa-angle-up fa-rotate-270" style="color: #ffffff;"></i></h3>
             </button>
           </div>
           <div class="car-slide hot-pick">
@@ -278,7 +334,7 @@
           </div>
           <div class="nav-button-right hot-right" style="height: 300px;">
             <button class="s-right" style="margin-top: 125px;">
-              <h3>&gt;</h3>
+              <h3><i class="fa-solid fa-angle-up fa-rotate-90" style="color: #ffffff;"></i></h3>
             </button>
           </div>
         </div>
@@ -296,7 +352,7 @@
           <div class="carosel">
             <div class="nav-button-left pet-left">
               <button class="s-left">
-                <h3>&lt;</h3>
+                <h3><i class="fa-solid fa-angle-up fa-rotate-270" style="color: #ffffff;"></i></h3>
               </button>
             </div>
             <div class="car-slide pet-pick">
@@ -338,7 +394,7 @@
             </div>
             <div class="nav-button-right pet-right">
               <button class="s-right">
-                <h3>&gt;</h3>
+                <h3><i class="fa-solid fa-angle-up fa-rotate-90" style="color: #ffffff;"></i></h3>
               </button>
             </div>
           </div>
@@ -352,7 +408,7 @@
         <div class="carosel ">
           <div class="nav-button-left lang-left">
             <button class="s-left" style="margin-top: 50px;">
-              <h3>&lt;</h3>
+              <h3><i class="fa-solid fa-angle-up fa-rotate-270" style="color: #ffffff;"></i></h3>
             </button>
           </div>
           <div class="car-slide lang-pick">
@@ -386,7 +442,7 @@
           </div>
           <div class="nav-button-right lang-right" height="10px">
             <button class="s-right" style="margin-top: 50px;">
-              <h3>&gt;</h3>
+              <h3><i class="fa-solid fa-angle-up fa-rotate-90" style="color: #ffffff;"></i></h3>
             </button>
           </div>
         </div>
@@ -401,7 +457,7 @@
         <div class="carosel">
           <div class="nav-button-left top-pop-left">
             <button class="s-left">
-              <h3>&lt;</h3>
+              <h3><i class="fa-solid fa-angle-up fa-rotate-270" style="color: #ffffff;"></i></h3>
             </button>
           </div>
           <div class="car-slide top-pop-pick">
@@ -440,7 +496,7 @@
           </div>
           <div class="nav-button-right top-pop-right">
             <button class="s-right">
-              <h3>&gt;</h3>
+              <h3><i class="fa-solid fa-angle-up fa-rotate-90" style="color: #ffffff;"></i></h3>
             </button>
           </div>
         </div>
@@ -457,7 +513,7 @@
         <div class="carosel">
           <div class="nav-button-left top-rate-left">
             <button class="s-left">
-              <h3>&lt;</h3>
+              <h3><i class="fa-solid fa-angle-up fa-rotate-270" style="color: #ffffff;"></i></h3>
             </button>
           </div>
           <div class="car-slide top-rate-pick">
@@ -496,7 +552,7 @@
           </div>
           <div class="nav-button-right top-rate-right">
             <button class="s-right">
-              <h3>&gt;</h3>
+              <h3><i class="fa-solid fa-angle-up fa-rotate-90" style="color: #ffffff;"></i></h3>
             </button>
           </div>
         </div>
@@ -510,7 +566,7 @@
         <div class="carosel">
           <div class="nav-button-left spt-left">
             <button class="s-left">
-              <h3>&lt;</h3>
+              <h3><i class="fa-solid fa-angle-up fa-rotate-270" style="color: #ffffff;"></i></h3>
             </button>
           </div>
           <div class="car-slide spt-pick">
@@ -547,7 +603,7 @@
           </div>
           <div class="nav-button-right spt-right">
             <button class="s-right">
-              <h3>&gt;</h3>
+              <h3><i class="fa-solid fa-angle-up fa-rotate-90" style="color: #ffffff;"></i></h3>
             </button>
           </div>
         </div>
@@ -564,7 +620,7 @@
         <div class="carosel">
           <div class="nav-button-left tata-left">
             <button class="s-left">
-              <h3>&lt;</h3>
+              <h3><i class="fa-solid fa-angle-up fa-rotate-270" style="color: #ffffff;"></i></h3>
             </button>
           </div>
           <div class="car-slide tata-pick">
@@ -602,7 +658,7 @@
           </div>
           <div class="nav-button-right tata-right">
             <button class="s-right">
-              <h3>&gt;</h3>
+              <h3><i class="fa-solid fa-angle-up fa-rotate-90" style="color: #ffffff;"></i></h3>
             </button>
           </div>
         </div>
@@ -669,6 +725,7 @@
         </div>
       </div>
     </div>
+    <script defer src="app.js"></script>
 </body>
 
 </html>

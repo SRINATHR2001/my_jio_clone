@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const scrollContainer = document.querySelector(".mini-nav-item");
     const scrollLeftButton = document.querySelector(".L-button button");
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 document.addEventListener("DOMContentLoaded", function () {
-    const sections = [
+    const sections = [        
         { container: document.querySelector(".car-slide"), leftBtn: document.querySelector(".nav-button-left button"), rightBtn: document.querySelector(".nav-button-right button") },
         { container: document.querySelector(".hot-pick"), leftBtn: document.querySelector(".hot-left button"), rightBtn: document.querySelector(".hot-right button") },
         { container: document.querySelector(".lang-pick"), leftBtn: document.querySelector(".lang-left button"), rightBtn: document.querySelector(".lang-right button") },
@@ -89,3 +90,56 @@ function showavtModal() {
     options.style.display = 'block';
     
 }
+function reddiv() {
+    document.querySelector('.main-left').style.height = "35px";
+    document.querySelector('.main-left').style.width = "35px";
+    
+}
+
+function enldiv() {
+    document.querySelector('.main-left').style.height = "40px";
+    document.querySelector('.main-left').style.width = "40px";
+}
+function redbut() {
+    document.querySelector('.main-right').style.height = "35px";
+    document.querySelector('.main-right').style.width = "35px";
+    
+}
+
+function enlbut() {
+    document.querySelector('.main-right').style.height = "40px";
+    document.querySelector('.main-right').style.width = "40px";
+}
+
+const slides = document.querySelectorAll('.slide-div-img');
+const topics = document.querySelectorAll('.slide-topic');
+let currentSlide=0;
+slides[currentSlide].style.opacity = "1";
+slides[currentSlide].style.width="33rem";
+topics[currentSlide].style.display = 'block';
+
+function updateButtonState() {
+    let mainLeftButton = document.querySelector('.main-left');
+    let mainRightButton = document.querySelector('.main-right');
+    mainLeftButton.disabled = currentSlide === 0;
+    mainRightButton.disabled = currentSlide === slides.length - 1;
+}
+function any(direction){
+    let mainPick=document.querySelector('.main-pick');
+    let slidelength=document.querySelector('.slide-div').offsetWidth;
+    slides[currentSlide].style.opacity = "0.6";
+    slides[currentSlide].style.transition = "all 0.1s ease";
+slides[currentSlide].style.width = "28rem";
+topics[currentSlide].style.display = 'none';
+currentSlide+=direction;
+mainPick.scrollBy({
+    left:direction*slidelength*1,
+    behavior:'smooth'
+});
+slides[currentSlide].style.opacity = "1";
+slides[currentSlide].style.transition = "all 0.2s ease";
+slides[currentSlide].style.width="35rem";
+topics[currentSlide].style.display = 'block';
+updateButtonState();
+}
+updateButtonState();
